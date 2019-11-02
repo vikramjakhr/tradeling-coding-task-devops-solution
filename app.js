@@ -23,14 +23,14 @@ const db = require('./config/database');
 
 // connect to mongoose
 mongoose.connect(db.mongoURI, { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
-    console.log('MongoDB connected...');
+  console.log('MongoDB connected...');
 }).catch(err => {
-    console.log(err);
+  console.log(err);
 });
 
 // handlebars middleware
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+  defaultLayout: 'main'
 
 }));
 app.set('view engine', 'handlebars');
@@ -49,9 +49,9 @@ app.use(methodOverride('_method'));
 
 // express session
 app.use(session({
-    secret: 'secret',
-    resave: true,
-    saveUninitialized: true
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
 
 }));
 
@@ -66,22 +66,22 @@ app.use(flash());
 
 // Global variables
 app.use(function (req, res, next) {
-    res.locals.success_msg = req.flash('success_msg'); // needed for flash to work
-    res.locals.error_msg = req.flash('error_msg');     // needed for flash to work
-    res.locals.error = req.flash('error');             // needed for flash to work
-    res.locals.user = req.user || null;                // needed for passport login/logout to work
-    next();
+  res.locals.success_msg = req.flash('success_msg'); // needed for flash to work
+  res.locals.error_msg = req.flash('error_msg');     // needed for flash to work
+  res.locals.error = req.flash('error');             // needed for flash to work
+  res.locals.user = req.user || null;                // needed for passport login/logout to work
+  next();
 });
 
 app.get('/', (req, res) => {
-    const title = 'Welcome to ToDo!';
-    res.render('index', {
-        title: title
-    });
+  const title = 'Welcome to ToDo!';
+  res.render('index', {
+    title: title
+  });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about');
+  res.render('about');
 });
 
 
@@ -92,5 +92,5 @@ app.use('/todos', todos);
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+  console.log(`listening on port ${port}`);
 });
