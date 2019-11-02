@@ -59,7 +59,7 @@ Please follow this guidelines while implementing the solution.
 
 How to proceed
 ===========
-1) Clone this folder on your local machine and start a new local repo.
+1) Clone this repository on your local machine and start a new local repository.
 2) Write the code.
 3) Write the documentation.
 4) The repository should contains the modified application and all other DevOps files and scripts in a separate folder
