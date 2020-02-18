@@ -101,5 +101,4 @@ module "nat" {
   prefix    = "${local.Prefix}"
   subnet_id = "${module.subnet_public_az_1.id}"
   tags      = "${local.default_tags}"
-
 }
