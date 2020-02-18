@@ -1,4 +1,4 @@
-AWS NAT Geteway Terraform Module
+AWS Route table association Terraform Module
 =========
 
 - Reference: https://www.terraform.io/docs/providers/aws/r/route_table_association.html
