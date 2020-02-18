@@ -8,8 +8,8 @@ AWS Terraform Module
 List of modules:
 -------------------------------
 
-* [VPC](./modules/aws_vpc)
-* [Subnet](./modules/aws_subnet)
-* [NAT Gateway](./modules/aws_nat_gateway)
-* [IGW](./modules/aws_igw)
-* [Route Table](./modules/aws_route_table_association)
+* [VPC](./aws_vpc)
+* [Subnet](./aws_subnet)
+* [NAT Gateway](./aws_nat_gateway)
+* [IGW](./aws_igw)
+* [Route Table](./aws_route_table_association)
