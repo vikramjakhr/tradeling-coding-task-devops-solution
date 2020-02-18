@@ -1,4 +1,4 @@
-AWS VPC Terraform Module
+AWS IGW Terraform Module
 =========
 
 - Reference: https://www.terraform.io/docs/providers/aws/r/internet_gateway.html

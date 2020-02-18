@@ -1,4 +1,4 @@
-AWS NAT Geteway Terraform Module
+AWS NAT Gateway Terraform Module
 =========
 
 - Reference: https://www.terraform.io/docs/providers/aws/r/nat_gateway.html
