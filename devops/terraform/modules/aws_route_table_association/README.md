@@ -16,7 +16,7 @@ The key features of this Module are:
 Usage
 -------------------------------
 
-Use below snippet in tf file to create a NAT in AWS.
+Use below snippet in tf file to create a route table association in AWS.
 
 ```
 module "rtb_association" {

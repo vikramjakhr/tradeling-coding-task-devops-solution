@@ -12,7 +12,7 @@ The key features of this Module are:
 Usage
 -------------------------------
 
-Use below snippet in tf file to create a NAT in AWS.
+Use below snippet in tf file to create a subnet in AWS.
 
 ```
 module "subnet" {
