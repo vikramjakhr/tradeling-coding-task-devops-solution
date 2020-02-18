@@ -20,7 +20,7 @@ Use below snippet in tf file to create a route table association in AWS.
 
 ```
 module "rtb_association" {
-  source = "./modules/aws_nat_gateway"
+  source = "./modules/aws_route_table_association"
 
   prefix                 = "<prefix-here>"
   vpc_id                 = "<vpc-id-here>"

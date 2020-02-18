@@ -102,3 +102,48 @@ module "nat" {
   subnet_id = "${module.subnet_public_az_1.id}"
   tags      = "${local.default_tags}"
 }
+
+# Route table association
+module "rtb_association_subnet_public_az_1" {
+  source = "./modules/aws_route_table_association"
+
+  prefix                 = "${local.Prefix}"
+  vpc_id                 = "${module.vpc.id}"
+  subnet_id              = "${module.subnet_public_az_1.id}"
+  gateway_id             = "${module.igw.id}"
+  destination_cidr_block = "0.0.0.0/0"
+  tags                   = "${local.default_tags}"
+}
+
+module "rtb_association_subnet_public_az_2" {
+  source = "./modules/aws_route_table_association"
+
+  prefix                 = "${local.Prefix}"
+  vpc_id                 = "${module.vpc.id}"
+  subnet_id              = "${module.subnet_public_az_2.id}"
+  gateway_id             = "${module.igw.id}"
+  destination_cidr_block = "0.0.0.0/0"
+  tags                   = "${local.default_tags}"
+}
+
+module "rtb_association_subnet_private_az_1" {
+  source = "./modules/aws_route_table_association"
+
+  prefix                 = "${local.Prefix}"
+  vpc_id                 = "${module.vpc.id}"
+  subnet_id              = "${module.subnet_private_az_1.id}"
+  gateway_id             = "${module.nat.id}"
+  destination_cidr_block = "0.0.0.0/0"
+  tags                   = "${local.default_tags}"
+}
+
+module "rtb_association_subnet_private_az_2" {
+  source = "./modules/aws_route_table_association"
+
+  prefix                 = "${local.Prefix}"
+  vpc_id                 = "${module.vpc.id}"
+  subnet_id              = "${module.subnet_private_az_2.id}"
+  gateway_id             = "${module.nat.id}"
+  destination_cidr_block = "0.0.0.0/0"
+  tags                   = "${local.default_tags}"
+}
