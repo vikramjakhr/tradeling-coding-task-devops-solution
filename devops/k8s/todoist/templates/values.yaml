@@ -1,0 +1,30 @@
+# Default values for todoist.
+
+replicaCount: 2
+
+image:
+  repository: vikramjakhr/mine
+  tag: tadling-todoist
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: false
+  
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+app:
+  mongoURI: "mongodb://localhost/tododb-dev"
+  port: 8080

@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }-configmap
-  namespace: namespace-here
+  name: {{ .Release.Name }}-configmap
 data:
-  mongoURI: "<uri-here>"
+  mongoURI: {{ .Values.app.mongoURI }}
+  port: {{ .Values.app.port }}
