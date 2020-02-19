@@ -4,5 +4,5 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-configmap
 data:
-  mongoURI: {{ .Values.app.mongoURI }}
-  port: {{ .Values.app.port }}
+  mongoURI: {{ .Values.app.mongoURI | quote }}
+  port: {{ .Values.app.port | quote }}
